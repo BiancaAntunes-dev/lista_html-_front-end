@@ -1,0 +1,9 @@
+.box {
+    display: flex;
+    flex-direction: flex;
+    border: 1px solid green;
+    div {
+        border: 1px solid blue;
+    }
+
+}

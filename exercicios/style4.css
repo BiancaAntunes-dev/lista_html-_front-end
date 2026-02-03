@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 section {
     background-color: rgb(135, 190, 222);
     border: 2px solid rgb(7, 1, 1);
@@ -30,19 +32,24 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #4273b3;
+    color: #265513;
     font-weight: bold;
     font-size: 1.5rem;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
     
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .logo-img {
-    height: 50px;        /* altura fixa para o logo */
-    width: 50px;         /* Define a largura fixa para manter o quadrado */
-    object-fit: cover;   /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 8px;  /* Arredonda os cantos para parecer um ícone */
-    margin-right: 12px;  /* Afasta a imagem do texto do logo */
+    height: 60px;        
+    width: auto;         
+    display: block; 
 }
 
 .logo {

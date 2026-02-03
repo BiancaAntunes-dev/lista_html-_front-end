@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios HTML 4</title>
     <link rel="stylesheet" href="style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 <body>
-    <!--Refatore um código usando <div> para usar as tags semânticas: <header>, <main>
-e <footer>. Crie uma estrutura completa de blog post usando <article>, <section> para os
-comentários e <aside> para a barra lateral-->
+    
 
     <header>
         <div class="container">
-        <a href="#" class="logo">
-        <img src="https://img.freepik.com/vetores-premium/ilustracao-em-vetor-de-silhueta-de-caneta-de-tinta-de-icone-de-assunto-vintage-de-simbolo-de-poesia-e-literatura-para-escrita_421321-525.jpg" alt="Logo do Blog de Poemas" class="logo-img">
-        <span class="logo-text">Blog de Poemas</span>
+            <a href="#" class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7LftSstUJ5FunC491KA7hNnFD66FPEUyAUA&s" alt="Logo do Blog de Poemas" class="logo-img">
+                <span class="logo-text">Tempero de vó</span>
         </a>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="contato" class="nav-link">Contato</a></li>
+                <li><a href="#sobre" class="nav-link">Receitas</a></li>
+                <li><a href="contato" class="nav-link">Fale conosco</a></li>
             </ul>
         </nav>
         
         <div class="header-actions">
-            <a href="#" class="btn-enroll">Inscreva-se</a>
+            <a href="#" class="btn-enroll">Login</a>
+            <a href="#" class="btn-enroll">Criar conta</a>
         <div>
             <span></span>
             <span></span>
@@ -37,22 +38,16 @@ comentários e <aside> para a barra lateral-->
 
     <main>
         <article>
-            <h2>Poema Famoso:</h2>
-            <p>Escrito por: Mario Quintana</p>
-            <p>Poeminho do Contra:
-
-            "Todos esses que aí estão
-            Atravancando meu caminho,
-            Eles passarão...
-            Eu passarinho!</p>
+            <h1>Receitas do momento:</h1>
+            <p><strong></p>
         </article>
     
 
-    <section id="comentários">
-        <h3>Comentários dos leitores:</h3>
-        <article>
-            <p><strong> José Silva:</strong> Excelente conteúdo! Já quero mais poemas.</p>
-        </article>
+    <section class="recipe-container">
+        <h2 class="recipe-title">Avocado Toast</h2>
+        <div class="recipe-body">
+            <p><strong> Modo de preparo:</strong></p>
+       </div>
     </section>
 
     <aside>
@@ -67,7 +62,7 @@ comentários e <aside> para a barra lateral-->
     </main>
 
    <footer>
-    <p>© 2026 Blog de Poemas. Todos os direitos reservados.</p>
+    <p>© 2026 Ciência Livre. Todos os direitos reservados.</p>
    </footer>
     
 </body>
