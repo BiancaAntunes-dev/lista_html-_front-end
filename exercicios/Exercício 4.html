@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios HTML 4</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
 <body>
     <!--Refatore um código usando <div> para usar as tags semânticas: <header>, <main>
@@ -11,17 +12,28 @@ e <footer>. Crie uma estrutura completa de blog post usando <article>, <section>
 comentários e <aside> para a barra lateral-->
 
     <header>
-        <h1>Blog de poemas</h1>
-        <hr>
-        <p>Bem-vindo ao meu blog de poemas!</p>
+        <div class="container">
+        <a href="#" class="logo">
+        <img src="https://img.freepik.com/vetores-premium/ilustracao-em-vetor-de-silhueta-de-caneta-de-tinta-de-icone-de-assunto-vintage-de-simbolo-de-poesia-e-literatura-para-escrita_421321-525.jpg" alt="Logo do Blog de Poemas" class="logo-img">
+        <span class="logo-text">Blog de Poemas</span>
+        </a>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="contato">Contato</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="contato" class="nav-link">Contato</a></li>
             </ul>
         </nav>
-    </header>
+        
+        <div class="header-actions">
+            <a href="#" class="btn-enroll">Inscreva-se</a>
+        <div>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+</header>
 
     <main>
         <article>
