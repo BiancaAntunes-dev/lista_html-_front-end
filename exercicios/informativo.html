@@ -14,27 +14,26 @@
                 Uma comparação visual e técnica dos sistemas de layout
             </p>
         </header>
-        <div>
-            <section>
-                <h3><span></span>Escolher Layout</h3>
-                <div>
-                    <button>FlexBox</button>
-                    <button>Grid</button>
+        <div class="controls-panel">
+            <section class="controls-card">
+                <h3><span class="dot" style="background: var(--primary)"></span>Escolher Layout</h3>
+                <div class="button-group">
+                    <button id= "btnFlex" class="btn active-flex">FlexBox</button>
+                    <button id="btnGrid" class="btn">Grid</button>
                 </div>
             </section>
-            <section>
-
-                <h3><span></span>Resumo do Comportamento</h3>
-                <div>
-                    <p>Unidimecional</p>
-                    <p>O layout é calculado item a item. Ótimo para distribur espaço em uma linha</p>
+            <section class="controls-card">
+                <h3><span class="dot" style="background: #94a3b8;"></span>Resumo do Comportamento</h3>
+                <div id="statusInfo">
+                    <p id="txtAxis" style="margin: 5px 0; font-weight: 600;">Unidimencional</p>
+                    <p id="txtIdeal" style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">O layout é calculado item a item. Ótimo para distribur espaço em uma linha</p>
                 </div>
             </section>
-            <section>
+            <section id="demoContainer" class="demo-container mode-flex">
                 <!--Gerado dinamicamente-->
             </section>
-            <footer>
-                <div>
+            <footer class="info-footer">
+                <div class="info.box info-flex">
                     <h4>O poder do flexbox</h4>
                     <ul>
                         <li>Foco no <strong>conteúdo</strong></li>
@@ -43,6 +42,7 @@
                         <li>Flexibilidade: itens podem crescer e encolher dinâmicamente.</li>
                     </ul>
                 </div>
+                <div class="info-box info-grid">
                 <h4>O poder do Grid</h4>
                     <ul>
                         <li>Foco no <strong>layout</strong> (container).</li>

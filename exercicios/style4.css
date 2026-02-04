@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 section {
     background-color: rgb(135, 190, 222);
@@ -12,7 +11,7 @@ section {
 h1 {
     color: rgb(96, 81, 165);
 }
-header {
+.header {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: static;
@@ -92,6 +91,17 @@ header {
     align-items: center;
     gap: 15px;
 }
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;         /* Ajuda a centralizar o SVG dentro dele */
+    align-items: center;
+    padding: 5px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
 .btn-login {
     text-decoration: none;
     color: var(--secondary-color);
@@ -107,6 +117,14 @@ header {
     font-weight: 600;
     transition: 0.3s;
 }
+.search-btn:hover {
+   transform: scale(1.1);
+}
+.search-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #265513;
+}
 .btn-signup:hover {
     background-color: #e67e22;
     transform: translateY(-2px);
@@ -119,6 +137,10 @@ header {
     border-radius: 50px;
     font-weight: bold;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
