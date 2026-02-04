@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
@@ -57,21 +56,22 @@ header {
     align-items: center;
     text-decoration: none;
 }
-
+/*--Navegação--*/
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 30px;
 }
 .nav-link {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     position: relative;
 }
 .nav-link:hover {
-    color: #1a4d8c;
+    color: var(--primary-color);
 }
 .nav-link::after {
     content: ' ';
@@ -86,20 +86,34 @@ header {
 .nav-link:hover::after {
     width: 100%;
 }
+/*--botões--*/
 .header-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.btn-portal {
+.btn-login {
     text-decoration: none;
-    color: #1a4d8c;
-    font-size: 0.9rem;
+    color: var(--secondary-color);
     font-weight: 600;
+    padding: 10px 20px; 
+}
+.btn-signup {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-signup:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
 }
 .btn-enroll {
     text-decoration: none;
-    background-color: #4273b3;
+    background-color: #265513;
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
@@ -112,4 +126,107 @@ header {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     background-color: #4273b3;
+}
+/* --- LAYOUT PRINCIPAL --- */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 colunas para receita, 1 para lateral */
+    gap: 30px;
+}
+
+/* --- CARD DE RECEITA --- */
+.recipe-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 30px;
+}
+
+.recipe-title {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.recipe-details h3 {
+    margin: 20px 0 10px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.recipe-details p {
+    margin-bottom: 15px;
+    min-height: 1.5em; /* parágrafo vazio  */
+}
+
+/* --- SIDEBAR --- */
+.sidebar-box {
+    background: #fdf2e9;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.sidebar h4 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    background: #eee;
+    color: #777;
 }
