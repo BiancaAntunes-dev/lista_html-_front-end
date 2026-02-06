@@ -1,234 +1,196 @@
-/* -- RESET UNIVERSAL -- */
 * {
-    margin: 0;            /* Remove o espaço externo padrão de todos os elementos */
-    padding: 0;           /* Remove o espaço interno padrão de todos os elementos */
-    box-sizing: border-box; /* Garante que bordas e preenchimento não aumentem o tamanho total do elemento */
+    margin: 0;            
+    padding: 0;           
+    box-sizing: border-box; 
 }
-
-/* -- TAGS GERAIS -- */
 section {
-    background-color: rgb(135, 190, 222); /* Define fundo azul claro; afeta todas as tags <section> */
-    border: 2px solid rgb(7, 1, 1);       /* Aplica uma borda preta fina ao redor da seção */
+    background-color: rgb(135, 190, 222); 
+    border: 2px solid rgb(7, 1, 1);       
 }
-
-
-/* -- CABEÇALHO (HEADER) -- */
 .header {
-    background-color: white;   /* Fundo branco; ligado à tag <header class="header"> */
-    border-bottom: 1px solid #f0f0f0; /* Cria uma sombra sutil abaixo do cabeçalho */
-    position: relative;                     /* Posição padrão (segue o fluxo do site) */
-    top: 0;                               /* Alinha ao topo (só funciona se mudar a posição para fixed ou sticky) */
-    z-index: 10;                        /* Garante que o menu fique sobreposto a outros elementos */
+    background-color: white;   
+    border-bottom: 1px solid #f0f0f0; 
+    position: relative;                    
+    top: 0;                            
+    z-index: 10;                        
 }
-
 .container {
-    max-width: 1200px;      /* Define uma largura máxima para o conteúdo não espalhar em telas gigantes */
-    margin: 0 auto;         /* Centraliza o container na horizontal; ligado a <div class="container"> */
-    display: flex;          /* Ativa o modo flexbox para alinhar itens em linha */
-    justify-content: space-between; /* Empurra o logo para um lado e os botões para o outro */
-    align-items: center;    /* Centraliza os itens verticalmente no meio do cabeçalho */
-    padding: 15px 20px;     /* Espaçamento interno para o conteúdo não encostar nas bordas */
+    max-width: 1200px;      
+    margin: 0 auto;         
+    display: flex;       
+    justify-content: space-between; 
+    align-items: center;    
+    padding: 15px 20px;     
 }
-
-/* -- LOGO E IDENTIDADE -- */
 .logo-text {
-    display: flex;          /* Permite alinhar ícone e texto do logo lado a lado */
-    align-items: center;    /* Centraliza o texto verticalmente com a imagem */
-    text-decoration: none;  /* Remove o sublinhado azul de links <a> */
-    color: #265513;         /* Define a cor verde escura para o texto do logo */
-    font-weight: bold;      /* Deixa a fonte em negrito */
-    font-size: 1.9rem;      /* Define o tamanho da fonte */
-    font-family: 'Playfair Display', serif; /* Fontes do sistema */
+    display: flex;          
+    align-items: center;    
+    text-decoration: none;  
+    color: #265513;         
+    font-weight: bold;     
+    font-size: 1.9rem;      
+    font-family: 'Playfair Display', serif; 
     letter-spacing: 1px;
 }
-
 .logo-img {
-    height: 90px;           /* Define a altura da imagem do logo; ligado a <img class="logo-img"> */
-    width: auto;            /* Ajusta a largura proporcionalmente para não achatar a imagem */
-    display: block;         /* Remove espaços extras abaixo da imagem */
+    height: 90px;           
+    width: auto;            
+    display: block;       
 }
-
 .logo {
-    display: flex;          /* Organiza os elementos dentro do link do logo */
-    align-items: center;    /* Alinhamento vertical */
-    text-decoration: none;  /* Garante que o link do logo não tenha sublinhado */
+    display: flex;          
+    align-items: center;    
+    text-decoration: none;  
 }
-
-/* -- NAVEGAÇÃO -- */
 .nav-menu {
-    display: flex;          /* Coloca os itens do menu (Início, Receitas, etc) em linha */
-    list-style: none;       /* Remove as "bolinhas" da lista <ul> */
-    gap: 30px;              /* Cria um espaçamento de 30px entre cada item do menu */
+    display: flex;          
+    list-style: none;       
+    gap: 30px;             
 }
-
 .nav-link {
-    text-decoration: none;  /* Remove sublinhado dos links do menu; ligado a <a class="nav-link"> */
-    color: var(--secondary-color); /* Usa uma variável de cor definida no seu projeto */
-    font-weight: 600;       /* Peso da fonte semi-negrito */
-    font-size: 1.1rem;          /*tamanho da fonte*/
-    transition: all 0.3s ease; /* Faz com que mudanças (como cor no hover) sejam suaves */
-    position: relative;     /* Necessário para posicionar a linha de efeito abaixo do texto */
+    text-decoration: none;  
+    color: var(--secondary-color); 
+    font-weight: 600;       
+    font-size: 1.1rem;          
+    transition: all 0.3s ease; 
+    position: relative;     
 }
-
 .nav-link:hover {
-    color: var(--primary-color); /* Muda a cor do texto quando o mouse passa por cima */
+    color: var(--primary-color); 
 }
-
 .nav-link::after {
-    content: ' ';           /* Cria um elemento "invisível" para a animação da linha */
-    position: absolute;     /* Posiciona a linha em relação ao link */
-    width: 0;               /* Começa com largura zero (escondida) */
-    height: 2px;            /* Espessura da linha */
-    bottom: -5px;           /* Distância abaixo do texto */
-    left: 0;
-    background-color: #000307; /* Cor da linha que vai aparecer */
-    transition: all 0.3s ease; /* Animação da linha crescendo */
+    content: ' ';           
+    position: absolute;    
+    width: 0;             
+    height: 2px;            
+    bottom: -5px; 
+    left: 0;         
+    background-color: #000307; 
+    transition: all 0.3s ease; 
 }
 
 .nav-link:hover::after {
-    width: 100%;            /* No hover, a linha cresce até cobrir toda a largura do texto */
+    width: 100%;            
 }
-
-/* -- BOTÕES DO CABEÇALHO -- */
 .header-actions {
-    display: flex;          /* Alinha botão de busca, login e cadastro em linha */
-    align-items: center;    /* Alinhamento vertical */
-    gap: 15px;              /* Espaço entre os botões */
+    display: flex;          
+    align-items: center;   
+    gap: 15px;              
 }
-
 .search-btn {
-    background: transparent; /* Remove o fundo do botão; ligado a <button class="search-btn"> */
-    border: none;           /* Remove bordas padrão de botão */
-    cursor: pointer;        /* Muda a seta do mouse para a "mãozinha" de clique */
+    background: transparent; 
+    border: none;          
+    cursor: pointer;        
     display: flex; 
     align-items: center;
     padding: 5px;
     height: 40px;
-    transition: transform 0.2s ease; /* Suaviza o efeito de aumentar de tamanho */
+    transition: transform 0.2s ease; 
 }
-
 .search-btn:hover {
-   transform: scale(1.1);   /* Aumenta o botão em 10% quando o mouse passa por cima */
+   transform: scale(1.1);   
 }
-
 .search-btn svg {
-    width: 22px;            /* Define o tamanho do ícone de lupa */
+    width: 22px;            
     height: 22px;
-    stroke: #265513;        /* Define a cor do contorno do ícone */
+    stroke: #265513;       
 }
-
 .btn-login {
-    text-decoration: none;  /* Estilo do link de login */
+    text-decoration: none;  
     color: var(--secondary-color);
     font-weight: 600;
     padding: 10px 20px; 
 }
-
 .btn-signup {
-    text-decoration: none;  /* Botão de cadastro; ligado a <a class="btn-signup"> */
-    background-color: var(--primary-color); /* Fundo colorido (laranja ou verde do seu tema) */
-    color: white;           /* Texto branco para contraste */
-    padding: 10px 25px;     /* Tamanho interno do botão */
-    border-radius: 8px;     /* Bordas levemente arredondadas */
+    text-decoration: none;  
+    background-color: var(--primary-color); 
+    color: white;           
+    padding: 10px 25px;     
+    border-radius: 8px;     
     font-weight: 600;
-    transition: 0.3s;       /* Suaviza a transição de cor e movimento */
+    transition: 0.3s;       
 }
-
 .btn-signup:hover {
-    background-color: #e67e22; /* Muda para um tom diferente no hover */
-    transform: translateY(-2px); /* Faz o botão "subir" levemente no clique/hover */
+    background-color: #e67e22; 
+    transform: translateY(-2px); 
 }
-
 .btn-enroll {
-    text-decoration: none;  /* Botão de "inscrever-se"; estilo pílula */
+    text-decoration: none;  
     background-color: #265513;
     color: white;
     padding: 10px 30px;
-    border-radius: 50px;    /* Deixa o botão totalmente arredondado nas pontas */
+    border-radius: 50px;    
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     white-space: nowrap;
 }
-
 .btn-enroll:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Sombra aumenta ao "subir" */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
     background-color: #03351a;
 }
-
-/* -- CORPO DO SITE (LAYOUT) -- */
 .main-container {
-    max-width: 1200px;      /* Largura central do conteúdo principal */
-    margin: 40px auto;      /* Espaço de 40px acima/abaixo e centralizado */
-    padding: 0 20px;        /* Evita que o texto encoste nas bordas em celulares */
+    max-width: 1200px;      
+    margin: 40px auto;     
+    padding: 0 20px;       
 }
 
 .hero-section {
-    margin-bottom: 40px;    /* Espaço abaixo da seção de destaque */
-    text-align: left;     /* Centraliza o título e textos de introdução */
+    margin-bottom: 40px;   
+    text-align: left;     
     max-width: 800px;
 }
 
 .hero-section h1 {
-    font-family: var(--font-title); /* Usa a fonte específica para títulos */
-    font-size: 2.5rem;      /* Título bem grande para chamar atenção */
+    font-family: var(--font-title); 
+    font-size: 2.5rem;      
     color: var(--secondary-color);
     margin-bottom: 5px;
 }
-
 .content-grid {
-    display: grid;          /* Ativa o sistema de colunas (Grid) */
-    grid-template-columns: 2fr 1fr; /* Divide em 2 partes para o conteúdo e 1 para a barra lateral */
-    gap: 30px;              /* Espaço entre a receita e a barra lateral */
+    display: grid;        
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;              
 }
-
-/* -- CARTÃO DE RECEITA -- */
 .recipe-card {
-    background: white;      /* Fundo branco do card; ligado a <article class="recipe-card"> */
-    border-radius: 15px;    /* Bordas bem arredondadas */
-    overflow: hidden;       /* Garante que a imagem não saia das bordas arredondadas */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra suave ao redor do card */
+    background: white;      
+    border-radius: 15px;    
+    overflow: hidden;       
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
     display: flex;
-    flex-direction: column; /* Organiza imagem em cima e texto embaixo */
+    flex-direction: column; 
 }
-
 .recipe-image img {
-    width: 100%;            /* Imagem ocupa toda a largura do card */
-    height: 350px;          /* Altura fixa para manter um padrão visual */
-    object-fit: cover;      /* Corta a imagem sem distorcer para preencher o espaço */
+    width: 100%;           
+    height: 350px;          
+    object-fit: cover;      
 }
-
 .recipe-info {
-    padding: 30px;          /* Espaçamento generoso dentro do texto da receita */
+    padding: 30px;        
 }
-
 .recipe-title {
     font-family: var(--font-title);
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
-
 .recipe-details h3 {
-    margin: 20px 0 10px;    /* Espaço ao redor dos subtítulos (Ingredientes/Preparo) */
-    border-left: 4px solid var(--primary-color); /* Linha vertical colorida ao lado do título */
-    padding-left: 10px;     /* Afasta o texto da linha lateral */
+    margin: 20px 0 10px;    
+    border-left: 4px solid var(--primary-color); 
+    padding-left: 10px;    
     font-size: 1.2rem;
 }
-
 .recipe-details p {
-    margin-bottom: 15px;    /* Espaço entre parágrafos da receita */
-    min-height: 1.5em;      /* Garante que linhas vazias ocupem espaço */
+    margin-bottom: 15px;    
+    min-height: 1.5em;      
 }
-
-/* -- BARRA LATERAL (SIDEBAR) -- */
 .sidebar-box {
-    background: #fdf2e9;    /* Fundo creme/laranja claro para destacar a lateral */
+    background: #fdf2e9;   
     padding: 35px;
     border-radius: 15px;
     min-height: 20px;
@@ -243,44 +205,38 @@ section {
 }
 
 .sidebar li {
-    margin-bottom: 12px;    /* Espaço entre links de outras receitas */
-}
+    margin-bottom: 12px;   
+} 
 
 .sidebar a {
-    text-decoration: none;  /* Links da lateral sem sublinhado */
+    text-decoration: none;  
     color: var(--secondary-color);
     font-size: 1.1rem;
 }
 
 .sidebar a:hover {
-    text-decoration: underline; /* Adiciona sublinhado apenas quando passa o mouse */
+    text-decoration: underline; 
 }
-
-/* -- RODAPÉ (FOOTER) -- */
 footer {
     display: flex;
-    padding-top: 40px;          /* Espaçamento interno */
+    padding-top: 40px;          
     padding-bottom: 40px;
-    margin-top: 50px;       /* Afasta o rodapé do conteúdo acima */
-    background: #eee;       /* Fundo cinza claro */
-    color: #777;            /* Cor do texto em cinza médio */
-}
-
+    margin-top: 50px;       
+    background: #eee;       
+    color: #777; 
+}           
 .div-footer {
     width: 50%;
     display: flex;
     align-items: center;
 }
-
 .div-footer p {
     margin: auto;
 }
-
 .div-footer div {
     margin: auto;
     display: flex;
 }
-
 .div-footer div p {
     margin-left: 10px;
     margin-right: 10px;
